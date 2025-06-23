@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealthSteg - Secure Medical Data Steganography</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-container">
+          <div class="hero-icon">
+            <svg
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+              />
+            </svg>
+          </div>
+
+          <h1 class="hero-title">
+            Secure Medical Data with
+            <span class="gradient-text">Steganography</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Encrypt and embed sensitive patient information inside medical
+            images with ease. HIPAA-conscious design for healthcare
+            professionals.
+          </p>
+
+          <button class="cta-button" onclick="scrollToForm()">
+            Start Encrypting
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="features-section">
+        <div class="features-container">
+          <div class="features-header">
+            <h2>Hospital-Grade Security Features</h2>
+            <p>
+              Advanced encryption and steganography technology designed
+              specifically for healthcare data protection.
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon medical-blue-bg">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+              </div>
+              <h3>AES-256 Encrypted Text</h3>
+              <p>
+                Military-grade encryption secures patient data before embedding
+                into medical images.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon medical-green-bg">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </div>
+              <h3>LSB Pixel-Based Embedding</h3>
+              <p>
+                Least Significant Bit manipulation hides data invisibly within
+                image pixels.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon medical-blue-bg">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                  />
+                </svg>
+              </div>
+              <h3>Separate Cipher Key & Stego Key</h3>
+              <p>
+                Dual-key protection: one for encryption, one for embedding
+                pattern control.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon medical-green-bg">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+                  />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </div>
+              <h3>View Embedded Image</h3>
+              <p>
+                Preview encrypted medical images before downloading to verify
+                quality.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon medical-blue-bg">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polygon points="13,2 3,14 12,14 11,22 21,10 12,10" />
+                </svg>
+              </div>
+              <h3>Extract with Dual Keys</h3>
+              <p>
+                Reveal hidden data using both cipher and stego keys for maximum
+                security.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon medical-green-bg">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                  <circle cx="9" cy="9" r="2" />
+                  <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                </svg>
+              </div>
+              <h3>PNG/JPEG Medical Images</h3>
+              <p>
+                Compatible with common medical imaging formats: X-rays, scans,
+                MRIs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form -->
+      <section id="form-section" class="form-section">
+        <div class="form-container">
+          <div class="form-header">
+            <h2>Secure Your Medical Data</h2>
+            <p>
+              Choose to embed sensitive information or extract hidden data from
+              medical images.
+            </p>
+          </div>
+
+          <div class="form-card">
+            <div class="tabs">
+              <div class="tabs-list">
+                <button class="tab-trigger active" data-tab="embed">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7,10 12,15 17,10" />
+                    <line x1="12" x2="12" y1="15" y2="3" />
+                  </svg>
+                  Embed Info
+                </button>
+                <button class="tab-trigger" data-tab="extract">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="17,8 12,3 7,8" />
+                    <line x1="12" x2="12" y1="3" y2="15" />
+                  </svg>
+                  Extract Info
+                </button>
+              </div>
+
+              <div class="tab-content active" id="embed-tab">
+                <form id="embed-form" class="form-content">
+                  <div class="input-group">
+                    <label for="embed-image">Upload Medical Image</label>
+                    <input
+                      type="file"
+                      id="embed-image"
+                      accept="image/png,image/jpeg"
+                      required
+                    />
+                    <p class="input-hint">Supports PNG and JPEG formats</p>
+                  </div>
+
+                  <div class="input-group">
+                    <label for="embed-text">Enter Text to Embed</label>
+                    <textarea
+                      id="embed-text"
+                      rows="4"
+                      placeholder="Enter Personal Details and Health History"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="input-row">
+                    <div class="input-group">
+                      <label for="embed-cipher-key">Enter Cipher Key</label>
+                      <input
+                        type="password"
+                        id="embed-cipher-key"
+                        placeholder="AES encryption key"
+                        required
+                      />
+                      <p class="input-hint">For AES encryption</p>
+                    </div>
+                    <div class="input-group">
+                      <label for="embed-stego-key">Enter Stego Key</label>
+                      <input
+                        type="password"
+                        id="embed-stego-key"
+                        placeholder="Embedding pattern key"
+                        required
+                      />
+                      <p class="input-hint">Controls pixel embedding</p>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="submit-button">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                    Encrypt & Embed
+                  </button>
+                </form>
+
+                <div
+                  id="embed-result"
+                  class="result-section"
+                  style="display: none"
+                >
+                  <div class="success-header">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+                      />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                    <span>Encryption Successful!</span>
+                  </div>
+                  <div class="image-preview">
+                    <img id="encrypted-preview" alt="Encrypted medical image" />
+                  </div>
+                  <button
+                    class="download-button"
+                    onclick="downloadEncryptedImage()"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7,10 12,15 17,10" />
+                      <line x1="12" x2="12" y1="15" y2="3" />
+                    </svg>
+                    Download Encrypted Image
+                  </button>
+                </div>
+              </div>
+
+              <div class="tab-content" id="extract-tab">
+                <form id="extract-form" class="form-content">
+                  <div class="input-group">
+                    <label for="extract-image">Upload Stego Image</label>
+                    <input
+                      type="file"
+                      id="extract-image"
+                      accept="image/png,image/jpeg"
+                      required
+                    />
+                    <p class="input-hint">Image with embedded data</p>
+                  </div>
+
+                  <div class="input-row">
+                    <div class="input-group">
+                      <label for="extract-cipher-key">Enter Cipher Key</label>
+                      <input
+                        type="password"
+                        id="extract-cipher-key"
+                        placeholder="AES decryption key"
+                        required
+                      />
+                      <p class="input-hint">Same as used for encryption</p>
+                    </div>
+                    <div class="input-group">
+                      <label for="extract-stego-key">Enter Stego Key</label>
+                      <input
+                        type="password"
+                        id="extract-stego-key"
+                        placeholder="Embedding pattern key"
+                        required
+                      />
+                      <p class="input-hint">Same as used for embedding</p>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="submit-button">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polygon points="13,2 3,14 12,14 11,22 21,10 12,10" />
+                    </svg>
+                    Reveal Hidden Info
+                  </button>
+                </form>
+
+                <div
+                  id="extract-result"
+                  class="result-section"
+                  style="display: none"
+                >
+                  <div class="success-header">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"
+                      />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                    <span>Data Extracted Successfully!</span>
+                  </div>
+                  <div class="extracted-data">
+                    <pre id="extracted-text"></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Technology -->
+      <section class="about-section">
+        <div class="about-container">
+          <div class="about-header">
+            <h2>About the Technology</h2>
+            <p>
+              Our app uses AES encryption combined with randomized pixel
+              embedding using a stego key. The dual-key protection system
+              provides enhanced security for medical data.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card">
+              <div class="about-card-header">
+                <div class="about-icon medical-blue-bg">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  </svg>
+                </div>
+                <h3>AES Encryption</h3>
+              </div>
+              <ul>
+                <li>• Advanced Encryption Standard with 256-bit keys</li>
+                <li>• Used by government and military organizations</li>
+                <li>• Encrypts patient data before embedding</li>
+                <li>• Requires cipher key for decryption</li>
+              </ul>
+            </div>
+
+            <div class="about-card">
+              <div class="about-card-header">
+                <div class="about-icon medical-green-bg">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </div>
+                <h3>LSB Steganography</h3>
+              </div>
+              <ul>
+                <li>• Randomized pixel embedding pattern</li>
+                <li>• Controlled by separate stego key</li>
+                <li>• Invisible to the human eye</li>
+                <li>• Preserves medical image quality</li>
+              </ul>
+            </div>
+
+            <div class="about-card">
+              <div class="about-card-header">
+                <div class="about-icon medical-blue-bg">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                    />
+                  </svg>
+                </div>
+                <h3>Dual-Key Protection</h3>
+              </div>
+              <ul>
+                <li>• Cipher key for AES encryption/decryption</li>
+                <li>• Stego key for embedding pattern control</li>
+                <li>• Both keys required for data extraction</li>
+                <li>• Enhanced security for medical data</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="importance-section">
+            <h3>Why Dual-Key Protection Matters in Healthcare</h3>
+            <p>
+              The dual-key system provides an additional layer of security
+              crucial for medical data. Even if one key is compromised, the
+              sensitive patient information remains protected. This approach
+              ensures compliance with healthcare data protection standards and
+              gives medical professionals confidence in the security of their
+              patient data.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-container">
+          <p>© 2025 HealthSteg | Built by Kesha Patel</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
